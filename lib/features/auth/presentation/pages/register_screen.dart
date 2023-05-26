@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../shared/widgets/custom_filled_button.dart';
-import '../../../shared/widgets/custom_text_form_field.dart';
-import '../../../shared/widgets/geometrical_background.dart';
+import '../../../shared/widgets/widgets.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -37,7 +35,7 @@ class RegisterScreen extends StatelessWidget {
                 const Spacer(flex: 1),
                 Column(
                   children: [
-                    _Logo(),
+                    Logo(),
                   ],
                 ),
                 const Spacer(flex: 3),
@@ -59,22 +57,6 @@ class RegisterScreen extends StatelessWidget {
           ],
         ),
       ))),
-    );
-  }
-}
-
-class _Logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: SizedBox(
-        width: 200,
-        child: Column(
-          children: <Widget>[
-            Image(image: AssetImage('assets/cafe-01.png')),
-          ],
-        ),
-      ),
     );
   }
 }

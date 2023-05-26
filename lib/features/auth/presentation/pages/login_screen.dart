@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../shared/widgets/custom_filled_button.dart';
-import '../../../shared/widgets/custom_text_form_field.dart';
-import '../../../shared/widgets/geometrical_background.dart';
+import '../../../shared/widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -24,7 +22,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 30),
             Column(
               children: [
-                _Logo(),
+                Logo(),
               ],
             ),
             //      const Icon(
@@ -45,45 +43,6 @@ class LoginScreen extends StatelessWidget {
           ],
         ),
       ))),
-    );
-  }
-}
-
-class _Logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: SizedBox(
-        width: 200,
-        child: Column(
-          children: <Widget>[
-            Image(image: AssetImage('assets/cafe-01.png')),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _Form extends StatefulWidget {
-  @override
-  __FormState createState() => __FormState();
-}
-
-class __FormState extends State<_Form> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          const TextField(),
-          const TextField(),
-          FilledButton(
-            onPressed: () {},
-            child: const Text('crear'),
-          )
-        ],
-      ),
     );
   }
 }
@@ -116,8 +75,8 @@ class _LoginForm extends StatelessWidget {
               width: double.infinity,
               height: 50,
               child: CustomFilledButton(
-                text: 'Crear',
-                buttonColor: Colors.brown,
+                text: 'Ingrese',
+                buttonColor: Colors.blue,
                 onPressed: () {},
               )),
           // const Spacer(flex: 1),
